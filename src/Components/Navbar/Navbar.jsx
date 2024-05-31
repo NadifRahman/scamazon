@@ -14,12 +14,12 @@ function Navbar() {
         </li>
         {/*change these routers later*/}
         <li className={`${NavbarStyle.li}`}>
-          <Link to="/" className={NavbarStyle.link}>
+          <Link to="Shop" className={NavbarStyle.link}>
             Shop
           </Link>
         </li>
         <li className={`${NavbarStyle.cartIcon} ${NavbarStyle.li}`}>
-          <Link to="/" className={NavbarStyle.link}>
+          <Link to="Cart" className={NavbarStyle.link}>
             <CartIcon numberOfItems={1} />
           </Link>
         </li>
