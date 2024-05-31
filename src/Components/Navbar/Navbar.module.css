@@ -1,0 +1,32 @@
+:root {
+  --nav-bg-color: #2d2d2d;
+  --icon-color: #fafafa;
+}
+
+.nav {
+  padding: 1rem;
+  background-color: var(--nav-bg-color);
+}
+
+.ul {
+  display: flex;
+  list-style: none;
+  justify-content: start;
+  gap: 2em;
+}
+
+.li {
+  color: var(--icon-color);
+  border: thin solid var(--icon-color);
+  padding: 0.3em 0.2em;
+  border-radius: 4px;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cartIcon {
+  margin-left: auto;
+}
