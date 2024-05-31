@@ -1,0 +1,15 @@
+/* GLOBAL CSS*/
+:root {
+}
+* {
+  padding: 0; /* remove all margin and paddings */
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+#root {
+  height: 100vh;
+}
+.main-container {
+}
