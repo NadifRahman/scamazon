@@ -6,6 +6,7 @@
 .nav {
   padding: 1rem;
   background-color: var(--nav-bg-color);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .ul {
@@ -20,6 +21,13 @@
   border: thin solid var(--icon-color);
   padding: 0.3em 0.2em;
   border-radius: 4px;
+  transition: 0.5s;
+}
+
+.li:hover {
+  color: var(--nav-bg-color);
+  background-color: var(--icon-color);
+  scale: 1.2;
 }
 
 .link {
