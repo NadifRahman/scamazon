@@ -1,9 +1,9 @@
+/* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
 import CartIcon from './CartIcon';
 import NavbarStyle from './Navbar.module.css';
-import logo from '../../assets/scamazon-logo.png';
 
-function Navbar() {
+function Navbar({ items }) {
   return (
     <nav className={NavbarStyle.nav}>
       <ul className={NavbarStyle.ul}>
@@ -20,7 +20,9 @@ function Navbar() {
         </li>
         <li className={`${NavbarStyle.cartIcon} ${NavbarStyle.li}`}>
           <Link to="Cart" className={NavbarStyle.link}>
-            <CartIcon numberOfItems={1} />
+            <CartIcon
+              numberOfItems={items.filter((item) => item.quantity > 0).length}
+            />
           </Link>
         </li>
       </ul>

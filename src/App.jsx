@@ -20,7 +20,8 @@ function App() {
         }
 
         const responseData = await response.json(); //parse the json
-        setItems(responseData); //set the item state
+
+        setItems(responseData.map((data) => ({ ...data, quantity: 0 }))); //set the item state
         setError(null); //set error to null, meaning no error occured
       } catch (err) {
         //if error caught, whether bad http request or otherwise
@@ -33,13 +34,13 @@ function App() {
 
     fetchForItems();
   }, []);
+
   return (
     <>
-      <Navbar />
+      <Navbar items={items} />
       <Outlet
         context={{ items, setItems, loading, setLoading, error, setError }}
       />
-
       {/* This element changes to whats needed*/}
     </>
   );
