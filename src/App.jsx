@@ -35,11 +35,31 @@ function App() {
     fetchForItems();
   }, []);
 
+  function updateQuantity(id, newQuantity) {
+    const newItems = [...items]; //create copy arrow
+    const index = newItems.findIndex((item) => item.id === id); //find index w/ that id
+    if (index !== -1) {
+      //if found
+      const updatedItem = { ...newItems[index], quantity: newQuantity }; //update value
+      newItems[index] = updatedItem; //set in the array
+      console.log('updated quantity');
+      setItems(newItems); //set it as the new state
+    }
+  }
+
   return (
     <>
       <Navbar items={items} />
       <Outlet
-        context={{ items, setItems, loading, setLoading, error, setError }}
+        context={{
+          items,
+          setItems,
+          loading,
+          setLoading,
+          error,
+          setError,
+          updateQuantity,
+        }}
       />
       {/* This element changes to whats needed*/}
     </>
