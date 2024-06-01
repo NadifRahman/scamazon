@@ -20,8 +20,6 @@ function ProductPage() {
     e.preventDefault();
     const quantity = Number(quantityRef.current.value);
     updateQuantity(productid, quantity); //updates the quantity of the object
-    console.log(items);
-    console.log(quantity);
   };
 
   return (

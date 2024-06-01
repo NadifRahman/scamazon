@@ -1,0 +1,51 @@
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  border: solid thin;
+  border-radius: 2em;
+  padding: 1em;
+
+  overflow: auto;
+}
+
+.cardContainer {
+  margin: 3em 10em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.total {
+  color: green;
+  align-self: flex-end;
+  font-size: 1.5rem;
+}
+
+.button {
+  align-self: flex-end;
+  width: 10ch;
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+  background: #fff;
+  border: 1px solid #d5d9d9;
+  font-size: 13px;
+  height: 31px;
+  padding: 0 11px;
+  text-align: center;
+  font-weight: 400;
+  color: #0f1111;
+}
+
+.empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

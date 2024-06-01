@@ -1,5 +1,6 @@
 import formatPrice from '../../util/formatPrice';
 import ItemCardStyle from './ItemCard.module.css';
+import { Link } from 'react-router-dom';
 /*This component takes an item object that has the properties*/
 function ItemCard({
   item: { id, title, price, category, description, image, quantity },
@@ -13,7 +14,9 @@ function ItemCard({
           className={ItemCardStyle.img}
         ></img>
       </div>
-      <h2 className={ItemCardStyle.title}>{title}</h2>
+      <Link to={`/ProductPage/${id}`}>
+        <h2 className={ItemCardStyle.title}>{title}</h2>
+      </Link>
       <h3 className={ItemCardStyle.price}>{formatPrice(price)}</h3>
     </div>
   );
