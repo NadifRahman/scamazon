@@ -3,9 +3,11 @@ import CartItem from './CartItem';
 import CartStyle from './Cart.module.css';
 import formatPrice from '../../util/formatPrice';
 function Cart() {
-  const { items, setItems, updateQuantity, loading } = useOutletContext();
+  const { items, setItems, updateQuantity, loading, error } =
+    useOutletContext();
 
   if (loading) return 'Loading';
+  if (error) return 'Failed to fetched';
 
   const filteredItems = items.filter((item) => item.quantity > 0);
 
