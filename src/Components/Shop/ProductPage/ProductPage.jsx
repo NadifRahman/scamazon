@@ -34,9 +34,10 @@ function ProductPage() {
           <input
             className={ProdPgStyle.input}
             type="number"
-            min="0"
+            min="1"
             max="100"
             step="1"
+            placeholder={item.quantity}
             ref={quantityRef}
           />
           <button className={ProdPgStyle.submit} type="submit">

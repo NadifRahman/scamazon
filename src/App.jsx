@@ -42,7 +42,6 @@ function App() {
       //if found
       const updatedItem = { ...newItems[index], quantity: newQuantity }; //update value
       newItems[index] = updatedItem; //set in the array
-      console.log('updated quantity');
       setItems(newItems); //set it as the new state
     }
   }
